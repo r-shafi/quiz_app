@@ -23,6 +23,7 @@ class ResultPage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: score > 5 ? Colors.green : Colors.red,
                 ),
+                textAlign: TextAlign.center,
               ),
             ),
             const SizedBox(height: 10),
