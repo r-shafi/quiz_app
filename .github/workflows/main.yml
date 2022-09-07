@@ -16,14 +16,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Test
-        run: echo "Hello World"
       - name: Test 2
-        run: echo $github.action_ref
-      - name: Test 3
-        run: echo $github.run_number
-      - name: Test 4
-        run: echo $github.run_attempt
+        run: echo $github
 
     # steps:
     #   - uses: actions/checkout@v1
