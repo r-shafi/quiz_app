@@ -26,6 +26,7 @@ class Trivia extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Stack(
+              alignment: Alignment.center,
               children: [
                 Container(
                   margin: const EdgeInsets.symmetric(vertical: 30),
@@ -51,7 +52,6 @@ class Trivia extends StatelessWidget {
                 ),
                 Positioned(
                   top: 15,
-                  left: 140,
                   child: Container(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 10,
