@@ -16,6 +16,8 @@ dependencies:
 
   flutter_bloc: ^8.1.1
 
+  animate_gradient: ^0.0.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
