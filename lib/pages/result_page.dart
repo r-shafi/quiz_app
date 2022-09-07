@@ -14,11 +14,15 @@ class ResultPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'Your Scored $score Out Of 10',
-              style: const TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Text(
+                'Your Scored $score Out Of 10 ${score == 10 ? '💯' : score > 5 ? '👍' : '👎'}',
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: score > 5 ? Colors.green : Colors.red,
+                ),
               ),
             ),
             const SizedBox(height: 10),
