@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/pages/trivia_page.dart';
+import 'package:quiz_app/pages/start_page.dart';
 
 void main() => runApp(const App());
 
@@ -11,7 +11,7 @@ class App extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Quiz App',
-      home: TriviaPage(),
+      home: StartPage(),
     );
   }
 }
