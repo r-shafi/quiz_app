@@ -73,6 +73,7 @@ class _TriviaPageState extends State<TriviaPage> {
         backgroundColor: Colors.teal,
         title: const Text('Trivia Game'),
         centerTitle: true,
+        automaticallyImplyLeading: false,
       ),
       body: answeredQuestions == 10
           ? ResultPage(
