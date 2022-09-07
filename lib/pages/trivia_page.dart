@@ -20,6 +20,8 @@ class _TriviaPageState extends State<TriviaPage> {
   int currentScore = 0;
   int answeredQuestions = 0;
 
+  List<int> askedQuestions = [];
+
   Random random = Random();
 
   @override
@@ -29,7 +31,9 @@ class _TriviaPageState extends State<TriviaPage> {
       (value) => setState(
         () {
           _triviaList = value;
-          _trivia = _triviaList[random.nextInt(_triviaList.length)];
+          int qIndex = random.nextInt(_triviaList.length);
+          askedQuestions.add(qIndex);
+          _trivia = _triviaList[qIndex];
           loaded = true;
         },
       ),
@@ -46,13 +50,22 @@ class _TriviaPageState extends State<TriviaPage> {
       });
     }
 
-    evaluateAnswer();
+    nextQuestion();
   }
 
-  evaluateAnswer() {
+  nextQuestion() {
     if (answeredQuestions < 10) {
       setState(() {
-        _trivia = _triviaList[random.nextInt(_triviaList.length)];
+        int nextQIndex = random.nextInt(_triviaList.length);
+
+        if (askedQuestions.contains(nextQIndex)) {
+          nextQuestion();
+          return;
+        } else {
+          askedQuestions.add(nextQIndex);
+        }
+
+        _trivia = _triviaList[nextQIndex];
         answeredQuestions++;
       });
     }
