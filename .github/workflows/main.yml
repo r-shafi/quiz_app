@@ -18,8 +18,11 @@ jobs:
     steps:
       - name: Test
         run: echo "Hello World"
+      - name: Test 2
         run: echo ${github.action_ref}
+      - name: Test 3
         run: echo ${github.run_number}
+      - name: Test 4
         run: echo ${github.run_attempt}
 
     # steps:
